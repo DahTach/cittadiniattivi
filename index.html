@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cittadini Attivi</title>
+    <meta name="description" content="Cittadini Attivi Website" />
+    <meta name="author" content="Francesco" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="global.css" />
+    <script src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <dialog
+      id="cookies-popup"
+      class="inset-0 z-60 p-0 mb-[5vw] sm:mb-[2vw] bg-transparent sm:ml-[2vw] h-min entering"
+    >
+      <div
+        class="flex items-end justify-center min-h-full p-4 text-center rounded-md sm:items-center sm:p-0"
+      >
+        <div
+          class="relative overflow-hidden text-left transition-all transform rounded-lg shadow-sm sm:w-full sm:max-w-lg"
+        >
+          <div class="px-4 pt-5 pb-4 bg-white">
+            <div class="sm:flex sm:items-start">
+              <div
+                class="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-gray-100 rounded-full sm:mx-0 sm:h-10 sm:w-10"
+              >
+                <svg
+                  class="w-6 h-6 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <h3
+                  class="text-base font-semibold leading-6 text-gray-900"
+                  id="modal-title"
+                >
+                  Preferenze Cookies
+                </h3>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Aliquid, ex!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex px-4 py-5 align-middle bg-gray-50 h-min">
+            <a
+              id="more-cookies"
+              href=""
+              class="inline-flex flex-1 px-3 py-2 text-sm font-semibold text-center text-gray-900 outline-none w-min h-min whitespace-nowrap"
+              >Learn more →</a
+            >
+            <button
+              id="refuse-cookies"
+              type="submit"
+              class="inline-flex justify-center px-3 py-2 text-sm font-semibold text-gray-900 bg-white rounded-md shadow-sm w-min ring-1 ring-inset ring-gray-300 hover:bg-gray-50 h-min"
+            >
+              Rifiuta
+            </button>
+            <button
+              autofocus
+              id="accept-cookies"
+              type="submit"
+              class="inline-flex justify-center px-3 py-2 ml-3 text-sm font-semibold text-white bg-green-600 rounded-md shadow-sm w-min hover:bg-green-500 h-min focus:outline-blue-200"
+            >
+              Accetta
+            </button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+
+    <div class="bg-white">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          class="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <svg
+                class="w-10 h-10"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                viewBox="0 0 64 64"
+              >
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M46.025 33.56l5.427 5.431a4 4 0 0 0 5.657-5.656L43.68 19.9c-2.441-2.44-5.137-2.672-8.016.208l-.838.828a4 4 0 0 1-5.655-5.656L32 12.455C35.266 9.185 37.124 8 39.873 8h4.34L62 25.776l-6.23 6.23"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M46.014 33.559l6.844 6.841a4 4 0 0 1-5.658 5.66l-6.239-6.242"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M40.962 39.818l4.825 4.827a4 4 0 0 1-5.652 5.655l-2.827-2.828"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M37.616 47.78l1.39 1.393a4 4 0 0 1-5.653 5.657l-1.39-1.394M8.45 32.007L2 25.556 18.021 9.531s2.132 2.482 3.924 2.482c2.174 0 2.706-.706 4-2 2.124-2.126 5.32-2.063 8 .613"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M15.6 36.163a4 4 0 1 0-5.653-5.655l-2.825 2.827a4 4 0 0 0 5.655 5.656z"
+                  data-name="layer1"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M21.258 41.818a4 4 0 0 0-5.658-5.656L11.362 40.4a4 4 0 0 0 5.655 5.656zm5.653 5.656a4 4 0 0 0-5.653-5.656l-2.827 2.827a4 4 0 0 0 5.655 5.655z"
+                  data-name="layer1"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M32.258 53.436A4 4 0 1 0 26.6 47.78l-1.392 1.393a4 4 0 0 0 5.655 5.657z"
+                  data-name="layer1"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button id="open-menu-button"
+              type="button"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+              >Home</a
+            >
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+              >Cosa facciamo</a
+            >
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+              >Segnalazioni</a
+            >
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+              >Attivamente Protagonista</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+              >Fai una Segnalazione <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <dialog class="lg:hidden" role="dialog" aria-modal="true" id="mobile-menu">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <svg
+                class="w-10 h-10"
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                viewBox="0 0 64 64"
+              >
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M46.025 33.56l5.427 5.431a4 4 0 0 0 5.657-5.656L43.68 19.9c-2.441-2.44-5.137-2.672-8.016.208l-.838.828a4 4 0 0 1-5.655-5.656L32 12.455C35.266 9.185 37.124 8 39.873 8h4.34L62 25.776l-6.23 6.23"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M46.014 33.559l6.844 6.841a4 4 0 0 1-5.658 5.66l-6.239-6.242"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M40.962 39.818l4.825 4.827a4 4 0 0 1-5.652 5.655l-2.827-2.828"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M37.616 47.78l1.39 1.393a4 4 0 0 1-5.653 5.657l-1.39-1.394M8.45 32.007L2 25.556 18.021 9.531s2.132 2.482 3.924 2.482c2.174 0 2.706-.706 4-2 2.124-2.126 5.32-2.063 8 .613"
+                  data-name="layer2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M15.6 36.163a4 4 0 1 0-5.653-5.655l-2.825 2.827a4 4 0 0 0 5.655 5.656z"
+                  data-name="layer1"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M21.258 41.818a4 4 0 0 0-5.658-5.656L11.362 40.4a4 4 0 0 0 5.655 5.656zm5.653 5.656a4 4 0 0 0-5.653-5.656l-2.827 2.827a4 4 0 0 0 5.655 5.655z"
+                  data-name="layer1"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                  stroke="#202020"
+                  fill="none"
+                  d="M32.258 53.436A4 4 0 1 0 26.6 47.78l-1.392 1.393a4 4 0 0 0 5.655 5.657z"
+                  data-name="layer1"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+              </a>
+              <button id="close-menu-button"
+                type="button"
+                class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="flow-root mt-6">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="py-6 space-y-2">
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                    >Home</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                    >Cosa facciamo</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                    >Segnalazioni</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
+                    >Attivamente protagonista</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Fai una segnalazione</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      </header>
+
+      <div class="relative px-6 isolate pt-14 lg:px-8">
+        <div
+          class="absolute inset-x-0 overflow-hidden -top-40 -z-10 transform-gpu blur-3xl sm:-top-80"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div class="max-w-2xl py-32 mx-auto sm:py-48 lg:py-56">
+          <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div
+              class="relative px-3 py-1 text-sm leading-6 text-gray-600 rounded-full ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+            >
+              Resta aggiornato nel gruppo WhatsApp
+              <a href="#" class="font-semibold text-indigo-600"
+                ><span class="absolute inset-0" aria-hidden="true"></span><span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </div>
+          <div class="text-center">
+            <h2 class="text-xl tracking-tight text-gray-500 sm:text-2xl">
+              Ben arrivati sul Sito Ufficiale di
+            </h2>
+            <h1
+              class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+            >
+              Cittadini Attivi
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Il nostro focus è accrescere l’ autonomia di pensiero, identità e
+              campo di azione delle persone comuni, come siamo noi, cercando di
+              rappresentare un punto di riferimento per la cittadinanza.
+            </p>
+            <div class="flex items-center justify-center mt-10 gap-x-6">
+              <a
+                href="#"
+                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >Fai una segnlazione</a
+              >
+              <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+                >Guarda lo stato delle nostre segnalazioni<span
+                  aria-hidden="true"
+                  >→</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-24 bg-white sm:py-32">
+      <div class="px-6 mx-auto max-w-7xl lg:px-8">
+        <div class="max-w-4xl mx-auto lg:mx-0">
+          <p class="text-base font-semibold leading-7 text-indigo-600">
+            Su di noi
+          </p>
+          <h2
+            class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+          >
+            Cosa facciamo
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            Ci impegniamo a risolvere problematiche di tutti i giorni e a
+            mettere in condizione ogni cittadino di esercitare i propri diritti
+            nei confronti dell'amministrazione comunale e/o di Aziende
+            consorziate e non presenti sul territorio, rappresentando le
+            segnalazioni di eventuali disservizi, guasti, ecc.,in totale
+            autonomia, perché ogni cittadino ha il diritto di essere ascoltato.
+          </p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            In caso di non risposta o prolungamento delle tempistiche vi sarà
+            sempre la presenza di Cittadini Attivi pronta ad intervenire.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-24 bg-white sm:py-32">
+      <div class="px-6 mx-auto max-w-7xl lg:px-8">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Le Nostre Segnalazioni
+          </h2>
+          <p class="mt-2 text-lg leading-8 text-gray-600">
+            Segui lo stato delle nostre ultime segnalazioni
+          </p>
+        </div>
+        <div class="w-full mt-14">
+          <!-- <figure data-behold-id="zqgqK0CkuArUBWiLsLIR"></figure>
+          <script src="https://w.behold.so/widget.js" type="module"></script> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div
+        class="relative px-6 py-20 overflow-hidden bg-gray-100 isolate sm:rounded-3xl sm:px-10 sm:py-24 lg:py-24 xl:px-24"
+      >
+        <div
+          class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-0"
+        >
+          <div class="lg:row-start-2 lg:max-w-md">
+            <h2
+              class="text-3xl font-bold tracking-tight text-black sm:text-4xl"
+            >
+              Caratteristiche per una Segnalazione
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
+              Malesuada adipiscing sagittis vel nulla. Ac euismod vel sit
+              maecenas.
+            </p>
+          </div>
+          <img
+            src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+            alt="Product screenshot"
+            class="relative -z-20 min-w-full max-w-xl rounded-xl shadow-xl ring-1 ring-white/10 lg:row-span-4 lg:w-[64rem] lg:max-w-none"
+            width="2432"
+            height="1442"
+          />
+          <div
+            class="max-w-xl lg:row-start-3 lg:mt-10 lg:max-w-md lg:border-t lg:border-white/10 lg:pt-10"
+          >
+            <dl
+              class="max-w-xl space-y-8 text-base leading-7 text-gray-500 lg:max-w-none"
+            >
+              <div class="relative">
+                <dt class="inline-block font-semibold text-black ml-9">
+                  <svg
+                    class="absolute w-5 h-5 text-grey-500 left-1 top-1"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.5 3.75a3 3 0 00-3 3v10.5a3 3 0 003 3h15a3 3 0 003-3V6.75a3 3 0 00-3-3h-15zm4.125 3a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zm-3.873 8.703a4.126 4.126 0 017.746 0 .75.75 0 01-.351.92 7.47 7.47 0 01-3.522.877 7.47 7.47 0 01-3.522-.877.75.75 0 01-.351-.92zM15 8.25a.75.75 0 000 1.5h3.75a.75.75 0 000-1.5H15zM14.25 12a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H15a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3.75a.75.75 0 000-1.5H15z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Nome Cognome e Mail
+                </dt>
+                <dd class="inline">
+                  <br />Scrivici sempre Nome Cognome e Email di chi effettua la
+                  Segnalazione
+                </dd>
+              </div>
+              <div class="relative">
+                <dt class="inline-block font-semibold text-black ml-9">
+                  <svg
+                    class="absolute w-5 h-5 text-grey-500 left-1 top-1"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 9a3.75 3.75 0 100 7.5A3.75 3.75 0 0012 9z" />
+                    <path
+                      fill-rule="evenodd"
+                      d="M9.344 3.071a49.52 49.52 0 015.312 0c.967.052 1.83.585 2.332 1.39l.821 1.317c.24.383.645.643 1.11.71.386.054.77.113 1.152.177 1.432.239 2.429 1.493 2.429 2.909V18a3 3 0 01-3 3h-15a3 3 0 01-3-3V9.574c0-1.416.997-2.67 2.429-2.909.382-.064.766-.123 1.151-.178a1.56 1.56 0 001.11-.71l.822-1.315a2.942 2.942 0 012.332-1.39zM6.75 12.75a5.25 5.25 0 1110.5 0 5.25 5.25 0 01-10.5 0zm12-1.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Fotografia del caso
+                </dt>
+                <dd class="inline">
+                  <br />Allega sempre una fotografia della segnalazione in
+                  questione
+                </dd>
+              </div>
+              <div class="relative">
+                <dt class="inline-block font-semibold text-black ml-9">
+                  <svg
+                    class="absolute w-5 h-5 text-grey-500 left-1 top-1"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Indirizzo
+                </dt>
+                <dd class="inline">
+                  <br />
+                  Scrivi sempre l'indirizzo con il Numero Civico più vicino
+                </dd>
+              </div>
+              <div class="relative">
+                <dt class="inline-block font-semibold text-black ml-9">
+                  <svg
+                    class="absolute w-5 h-5 text-grey-500 left-1 top-1"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Descrizione
+                </dt>
+                <dd class="inline">
+                  <br />
+                  Cerca di descrivere sempre più dettagliatamente possibile
+                </dd>
+              </div>
+              <div class="relative">
+                <dt class="inline-block font-semibold text-black ml-9">
+                  <svg
+                    class="absolute w-5 h-5 text-grey-500 left-1 top-1"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.087 9l.54 9.176A3 3 0 006.62 21h10.757a3 3 0 002.995-2.824L20.913 9H3.087zM12 10.5a.75.75 0 01.75.75v4.94l1.72-1.72a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 111.06-1.06l1.72 1.72v-4.94a.75.75 0 01.75-.75z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Circoscrizione
+                </dt>
+                <dd class="inline">
+                  <br />
+                  Circoscrizione di appartenenza del caso
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div
+          class="pointer-events-none absolute left-12 top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-3xl lg:bottom-[-12rem] lg:top-auto lg:translate-y-0 lg:transform-gpu"
+          aria-hidden="true"
+        >
+          <div
+            class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-25"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white">
+      <div class="px-6 py-16 mx-auto max-w-7xl sm:py-24 lg:px-8">
+        <div class="w-full text-center">
+          <h2
+            class="text-2xl font-bold leading-10 tracking-tight text-center text-gray-900"
+          >
+            Cosa significa essere Attivamente Protagonista?
+          </h2>
+          <div class="inline-block max-w-2xl text-center">
+            <p class="text-center">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Assumenda doloribus inventore incidunt exercitationem qui!
+              Explicabo velit similique ipsum repudiandae qui.
+            </p>
+          </div>
+        </div>
+        <div class="mt-20">
+          <div
+            class="overflow-hidden bg-gray-200 divide-y divide-gray-200 rounded-lg shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0"
+          >
+            <div
+              class="relative p-6 bg-white rounded-tl-lg rounded-tr-lg sm:rounded-tr-none group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            >
+              <div>
+                <span
+                  class="inline-flex p-3 text-teal-700 rounded-lg bg-teal-50 ring-4 ring-white"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  <a href="#" class="focus:outline-none">
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    Compiti
+                  </a>
+                </h3>
+                <ul class="mt-2 text-sm text-gray-500 list-disc list-inside">
+                  <li>osservare tutto quello che ci circonda</li>
+                  <li>ascoltare chi ci circonda</li>
+                  <li>divulgare questa opportunità</li>
+                </ul>
+              </div>
+              <span
+                class="absolute text-gray-300 pointer-events-none right-6 top-6 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="relative p-6 bg-white sm:rounded-tr-lg group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            >
+              <div>
+                <span
+                  class="inline-flex p-3 rounded-lg text-rose-700 bg-rose-50 ring-4 ring-white"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  <a href="#" class="focus:outline-none">
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    Priorità a questi compiti
+                  </a>
+                </h3>
+                <ul class="mt-2 text-sm text-gray-500 list-disc list-inside">
+                  <li>valutazioni di pericolo strutturale</li>
+                  <li>valutazioni e di decoro</li>
+                  <li>
+                    valutazioni di carattere generale relative alla vita
+                    quotidiana
+                  </li>
+                  <li>valutazioni di sicurezza personale</li>
+                </ul>
+              </div>
+              <span
+                class="absolute text-gray-300 pointer-events-none right-6 top-6 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="relative p-6 bg-white group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            >
+              <div>
+                <span
+                  class="inline-flex p-3 rounded-lg bg-sky-50 text-sky-700 ring-4 ring-white"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  <a href="#" class="focus:outline-none">
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    Definizione di durata e scadenza
+                  </a>
+                </h3>
+                <ul class="mt-2 text-sm text-gray-500 list-disc list-inside">
+                  <li>indicare l’urgenza della valutazione</li>
+                  <li>stabilire una scadenza per segnalare</li>
+                </ul>
+              </div>
+              <span
+                class="absolute text-gray-300 pointer-events-none right-6 top-6 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="relative p-6 bg-white group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            >
+              <div>
+                <span
+                  class="inline-flex p-3 text-yellow-700 rounded-lg bg-yellow-50 ring-4 ring-white"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  <a href="#" class="focus:outline-none">
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    Costi e Risorse
+                  </a>
+                </h3>
+                <ul class="mt-2 text-sm text-gray-500 list-disc list-inside">
+                  <li>costo esclusivamente di tempo</li>
+                </ul>
+              </div>
+              <span
+                class="absolute text-gray-300 pointer-events-none right-6 top-6 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="relative p-6 bg-white sm:rounded-bl-lg group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            >
+              <div>
+                <span
+                  class="inline-flex p-3 rounded-lg bg-rose-50 text-rose-700 ring-4 ring-white"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  <a href="#" class="focus:outline-none">
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    Passi per realizzare efficienza
+                  </a>
+                </h3>
+                <ul class="mt-2 text-sm text-gray-500 list-disc list-inside">
+                  <li>sguardo critico e costruttivo</li>
+                  <li>valutazione del caso individuato</li>
+                  <li>definire l’urgenza</li>
+                  <li>
+                    scoprire e relazionarsi con gli uffici competenti specifici
+                    del caso
+                  </li>
+                  <li>impiego del proprio tempo per il caso</li>
+                </ul>
+              </div>
+              <span
+                class="absolute text-gray-300 pointer-events-none right-6 top-6 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              class="relative p-6 bg-white rounded-bl-lg rounded-br-lg sm:rounded-bl-none group focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500"
+            >
+              <div>
+                <span
+                  class="inline-flex p-3 text-indigo-700 rounded-lg bg-indigo-50 ring-4 ring-white"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">
+                  <a href="#" class="focus:outline-none">
+                    <!-- Extend touch target to entire panel -->
+                    <span class="absolute inset-0" aria-hidden="true"></span>
+                    Training
+                  </a>
+                </h3>
+                <ul class="mt-2 text-sm text-gray-500 list-disc list-inside">
+                  <li>osservare tutto quello che ci circonda</li>
+                  <li>ascoltare chi ci circonda</li>
+                  <li>divulgare questa opportunità</li>
+                </ul>
+              </div>
+              <span
+                class="absolute text-gray-300 pointer-events-none right-6 top-6 group-hover:text-gray-400"
+                aria-hidden="true"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white">
+      <div class="px-6 py-24 mx-auto max-w-7xl sm:py-32 lg:px-8 lg:py-40">
+        <div class="max-w-4xl mx-auto divide-y divide-gray-900/10">
+          <h2
+            class="text-2xl font-bold leading-10 tracking-tight text-gray-900"
+          >
+            Domande frequenti
+          </h2>
+          <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+            <div class="pt-6">
+              <!-- Expand/collapse question button -->
+              <button
+                type="button"
+                class="flex items-start justify-between w-full text-left text-gray-900 group peer"
+                aria-controls="faq-0"
+                aria-expanded="false"
+              >
+                <span class="text-base font-semibold leading-7"
+                  >Cosa devo fare se ...</span
+                >
+                <span class="flex items-center ml-6 h-7">
+                  <!--
+                      Icon when question is collapsed.
+    
+                      Item expanded: "hidden", Item collapsed: ""
+                    -->
+                  <svg
+                    class="w-6 h-6 plus group-focus:hidden"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v12m6-6H6"
+                    />
+                  </svg>
+                  <!--
+                      Icon when question is expanded.
+    
+                      Item expanded: "", Item collapsed: "hidden"
+                    -->
+                  <svg
+                    class="hidden w-6 h-6 minus group-focus:block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M18 12H6"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p
+                class="hidden text-base leading-7 text-gray-600 peer-focus:block"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+                tempora pariatur mollitia fugiat, quod quisquam quis accusamus
+                saepe odio doloremque blanditiis placeat, enim minima veniam.
+              </p>
+            </div>
+            <div class="pt-6">
+              <!-- Expand/collapse question button -->
+              <button
+                type="button"
+                class="flex items-start justify-between w-full text-left text-gray-900 group peer"
+                aria-controls="faq-0"
+                aria-expanded="false"
+              >
+                <span class="text-base font-semibold leading-7"
+                  >Cosa devo fare se ...</span
+                >
+                <span class="flex items-center ml-6 h-7">
+                  <!--
+                    Icon when question is collapsed.
+  
+                    Item expanded: "hidden", Item collapsed: ""
+                  -->
+                  <svg
+                    class="w-6 h-6 plus group-focus:hidden"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v12m6-6H6"
+                    />
+                  </svg>
+                  <!--
+                    Icon when question is expanded.
+  
+                    Item expanded: "", Item collapsed: "hidden"
+                  -->
+                  <svg
+                    class="hidden w-6 h-6 minus group-focus:block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M18 12H6"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p
+                class="hidden text-base leading-7 text-gray-600 peer-focus:block"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+                tempora pariatur mollitia fugiat, quod quisquam quis accusamus
+                saepe odio doloremque blanditiis placeat, enim minima veniam.
+              </p>
+            </div>
+            <div class="pt-6">
+              <!-- Expand/collapse question button -->
+              <button
+                type="button"
+                class="flex items-start justify-between w-full text-left text-gray-900 group peer"
+                aria-controls="faq-0"
+                aria-expanded="false"
+              >
+                <span class="text-base font-semibold leading-7"
+                  >Cosa devo fare se ...</span
+                >
+                <span class="flex items-center ml-6 h-7">
+                  <!--
+                  Icon when question is collapsed.
+
+                  Item expanded: "hidden", Item collapsed: ""
+                -->
+                  <svg
+                    class="w-6 h-6 plus group-focus:hidden"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v12m6-6H6"
+                    />
+                  </svg>
+                  <!--
+                  Icon when question is expanded.
+
+                  Item expanded: "", Item collapsed: "hidden"
+                -->
+                  <svg
+                    class="hidden w-6 h-6 minus group-focus:block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M18 12H6"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p
+                class="hidden text-base leading-7 text-gray-600 peer-focus:block"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+                tempora pariatur mollitia fugiat, quod quisquam quis accusamus
+                saepe odio doloremque blanditiis placeat, enim minima veniam.
+              </p>
+            </div>
+            <div class="pt-6">
+              <!-- Expand/collapse question button -->
+              <button
+                type="button"
+                class="flex items-start justify-between w-full text-left text-gray-900 group peer"
+                aria-controls="faq-0"
+                aria-expanded="false"
+              >
+                <span class="text-base font-semibold leading-7"
+                  >Cosa devo fare se ...</span
+                >
+                <span class="flex items-center ml-6 h-7">
+                  <!--
+                Icon when question is collapsed.
+
+                Item expanded: "hidden", Item collapsed: ""
+              -->
+                  <svg
+                    class="w-6 h-6 plus group-focus:hidden"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v12m6-6H6"
+                    />
+                  </svg>
+                  <!--
+                Icon when question is expanded.
+
+                Item expanded: "", Item collapsed: "hidden"
+              -->
+                  <svg
+                    class="hidden w-6 h-6 minus group-focus:block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M18 12H6"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <p
+                class="hidden text-base leading-7 text-gray-600 peer-focus:block"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+                tempora pariatur mollitia fugiat, quod quisquam quis accusamus
+                saepe odio doloremque blanditiis placeat, enim minima veniam.
+              </p>
+            </div>
+
+            <!-- More questions... -->
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+    <div
+      class="relative py-16 overflow-hidden bg-gray-500 isolate sm:py-24 lg:py-32"
+    >
+      <div class="px-6 mx-auto max-w-7xl lg:px-8">
+        <div
+          class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2"
+        >
+          <div class="max-w-xl lg:max-w-lg">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Entra nel gruppo Whatsapp
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-gray-300">
+              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
+              velit quis. Duis tempor incididunt dolore.
+            </p>
+            <div class="flex max-w-md mt-6 gap-x-4">
+              <label for="tel-number" class="sr-only">Email address</label>
+              <input
+                id="tel-number"
+                name="tel"
+                type="tel"
+                autocomplete="tel"
+                required
+                class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                placeholder="Inserisci il tuo numero di telefono"
+              />
+              <button
+                type="submit"
+                class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+            <div class="flex flex-col items-start">
+              <div class="p-2 rounded-md bg-white/5 ring-1 ring-white/10">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                  />
+                </svg>
+              </div>
+              <dt class="mt-4 font-semibold text-white">Weekly articles</dt>
+              <dd class="mt-2 leading-7 text-gray-400">
+                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
+                cupidatat duis commodo amet.
+              </dd>
+            </div>
+            <div class="flex flex-col items-start">
+              <div class="p-2 rounded-md bg-white/5 ring-1 ring-white/10">
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 01.198-.471 1.575 1.575 0 10-2.228-2.228 3.818 3.818 0 00-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0116.35 15m.002 0h-.002"
+                  />
+                </svg>
+              </div>
+              <dt class="mt-4 font-semibold text-white">No spam</dt>
+              <dd class="mt-2 leading-7 text-gray-400">
+                Officia excepteur ullamco ut sint duis proident non adipisicing.
+                Voluptate incididunt anim.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 -translate-x-1/2 left-1/2 -z-10 blur-3xl xl:-top-6"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

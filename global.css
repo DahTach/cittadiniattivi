@@ -1,0 +1,86 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+html,
+body {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y proximity;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.sceglilasede:focus ~ #centri-list {
+  bottom: 100%;
+  display: block;
+  animation: entering 100ms ease-out 1 normal forwards;
+}
+
+#centri-list {
+  display: none;
+  animation: leaving 75ms ease-in 1 normal forwards;
+}
+
+#open-mobile-sort:focus ~ #mobile-sort {
+  bottom: 100%;
+  display: block;
+  animation: entering 100ms ease-out 1 normal forwards;
+}
+
+#mobile-sort {
+  display: none;
+  animation: leaving 75ms ease-in 1 normal forwards;
+}
+
+.entering {
+  animation: entering 100ms ease-out 1 normal forwards;
+}
+
+.leaving {
+  animation: leaving 75ms ease-in 1 normal forwards;
+}
+
+@keyframes entering {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes leaving {
+  0% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
