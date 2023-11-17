@@ -37,7 +37,7 @@ window.onload = () => {
     });
 
   function chiSiamoList() {
-    var arrayVariable = ['Pier Paolo', 'Stefano', 'Nicola', 'Giovanni', 'Erasmo', 'Matteo', 'Giovanni', 'Adriano', 'Alessio', 'Fabio', 'Gloria', 'Lorella', 'Mauro', 'Nicola', 'Stefania', 'Alessandro', 'Barbara Chiara', 'Cristina', 'Diego', 'Elena', 'Erika', 'Ivana Mariangela', 'Mirco', 'Nadia', 'Paolo', 'Renata', 'Vittorio', 'Francesco', 'Aurora', 'Giulia', 'Emma', 'Sofia', 'Leonardo', 'Lorenzo', 'Mattia', 'Giuseppe', 'Federico', 'Simone', 'Daniele', 'Michele', 'Luigi', 'Ettore', 'Alessandro', 'Francesco', 'Giovanni', 'Andrea', 'Laura', 'Tommaso', 'Sofia', 'Gloria', 'Matteo', 'Giulia'];
+    var arrayVariable = ['Pier Paolo', 'Stefano', 'Nicola', 'Giovanni', 'Erasmo', 'Matteo', 'Giovanni', 'Adriano', 'Alessio', 'Fabio', 'Gloria', 'Lorella', 'Mauro', 'Nicola', 'Stefania', 'Alessandro', 'Barbara', 'Chiara', 'Cristina', 'Diego', 'Elena', 'Erika', 'Ivana', 'Mariangela', 'Mirco', 'Nadia', 'Paolo', 'Renata', 'Vittorio', 'Francesco', 'Aurora', 'Giulia', 'Emma', 'Sofia', 'Leonardo', 'Lorenzo', 'Mattia', 'Giuseppe', 'Federico', 'Simone', 'Daniele', 'Michele', 'Luigi', 'Ettore', 'Alessandro', 'Francesco', 'Giovanni', 'Andrea', 'Laura', 'Tommaso', 'Sofia', 'Gloria', 'Matteo', 'Giulia'];
     var arrayLength = arrayVariable.length;
     var temp;
     
@@ -45,14 +45,12 @@ window.onload = () => {
       temp = document.createElement('div');
       temp.className = 'results';
       temp.innerHTML = `
-              <div class="relative flex items-center px-3 py-2 space-x-2 bg-white border rounded-lg shadow-sm hover:shadow-md">
-                <div class="flex-1 min-w-0">
-                  <span class="focus:outline-none">
-                    <span class="absolute inset-0" aria-hidden="true"></span>
-                    <p class="text-sm font-medium text-gray-600">${arrayVariable[i]}</p>
-                  </span>
-                </div>
-              </div>`;
+            <li class="flex gap-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-7 flex-none" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              ${arrayVariable[i]}
+            </li>`;
       document.getElementById('chi_siamo_people').appendChild(temp);
     }
   }
