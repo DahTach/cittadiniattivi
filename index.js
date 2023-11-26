@@ -36,6 +36,12 @@ window.onload = () => {
       menu.close();
     });
 
+  Array.from(document.getElementsByClassName("mobile_menu_item")).forEach(function(menu_item){
+      menu_item.addEventListener("click", function(){
+      menu.close();
+    });
+  });
+
   function chiSiamoList() {
     var arrayVariable = ['Pier Paolo', 'Stefano', 'Nicola', 'Giovanni', 'Erasmo', 'Matteo', 'Giovanni', 'Adriano', 'Alessio', 'Fabio', 'Gloria', 'Lorella', 'Mauro', 'Nicola', 'Stefania', 'Alessandro', 'Barbara', 'Chiara', 'Cristina', 'Diego', 'Elena', 'Erika', 'Ivana', 'Mariangela', 'Mirco', 'Nadia', 'Paolo', 'Renata', 'Vittorio', 'Francesco', 'Aurora', 'Giulia', 'Emma', 'Sofia', 'Leonardo', 'Lorenzo', 'Mattia', 'Giuseppe', 'Federico', 'Simone', 'Daniele', 'Michele', 'Luigi', 'Ettore', 'Alessandro', 'Francesco', 'Giovanni', 'Andrea', 'Laura', 'Tommaso', 'Sofia', 'Gloria', 'Matteo', 'Giulia'];
     var arrayLength = arrayVariable.length;
